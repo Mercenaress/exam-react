@@ -1,0 +1,8 @@
+body {
+    width: 90vw;
+    height: 90vh;
+    background-color: #231F42;
+    color: white;
+    display: flex;
+    justify-content: center;
+}

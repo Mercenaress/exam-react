@@ -1,4 +1,6 @@
+import EventPriceSummary from "../components/EventPriceSummary";
 import GreenButton from "../components/GreenButton";
+import styles from './EventDetailsPage.module.css'
 
 function EventDetailsPage() {
     return ( 
@@ -8,7 +10,7 @@ function EventDetailsPage() {
         <h2>Lasse-Stefanz</h2>
         <p>21 mars kl 19:00-21:00</p>
         <p>@Kjell Härnqvistsalen</p>
-
+        <EventPriceSummary priceSummary={"1050 sek"} ticketAmount={1} />
         <GreenButton buttonText={"Lägg i varukorgen"} />
         </>
      );

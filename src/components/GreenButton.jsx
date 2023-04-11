@@ -1,6 +1,8 @@
+import styles from './GreenButton.module.css'
+
 function GreenButton({buttonText}) {
     return ( 
-        <button>{buttonText}</button>
+        <button className={styles.GreenButton}>{buttonText}</button>
      );
 }
 
