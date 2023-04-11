@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  --main-color: #231f42;
+  --color-white: #fff;
+  --color-black: #000;
+  --text-color: #f56b9a;
+}
+.flex-container > div {
+position: absolute;
+margin-top: 11rem;
+margin-left: -4rem;
+text-align: center;
+
+}
+.paginate-ctn {
+  display: flex;
+}
+.round-effect {
+  background: var(--color-white);
+  cursor: pointer;
+  font-size: 0.5rem;
+  text-align: center;
+  padding-top: 3px;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  margin: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.round-effect:hover {
+  background: var(--text-color);
+  color: var(--color-white);
+}
+.round-effect:hover a {
+  color: var(--color-white);
+}
+
+.active {
+  background: var(--text-color);
+  color: var(--color-white);
+}
+a:link {
+  background: var(--text-color);
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&family=Sansita+Swashed&display=swap');
+/*general rule */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/*variable*/
+ :root{
+ --main-color: #231F42;
+ --color-white: #fff;
+ --color-black:#000;
+ --text-color: #F56B9A;
+ --light-grey:rgba(0, 0, 0, 0.03);
+ --grey:rgba(0, 0, 0, 0.06)
+ 
+}
+ @media (max-width: 1400px) { 
+body{
+background:linear-gradient(var(--text-color, var(--main-color)));
+display: flex;
+justify-content: center;
+}
+.container {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+h2{
+color:var(--text-color);
+Font-family:Sansita;
+Font-style: Italic;
+font-Weight:600;
+font-Size:32px;
+Line-height:37.28px;
+}
+
+p{
+color:#fff;
+Font-family: Fira Sans;
+Font-style: Italic;
+Font-size: 22px;
+Line-height: 26.4px;
+Line-height: 100%;
+
+}
+
+}
