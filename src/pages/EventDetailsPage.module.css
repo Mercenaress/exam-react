@@ -1,8 +1,28 @@
 body {
-    width: 90vw;
-    height: 90vh;
     background-color: #231F42;
     color: white;
+    margin: 0;
+}
+
+.EventDetailsPage {
+    width: 90vw;
+    height: 90vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.EventDetailsPage h3, 
+.EventDetailsPage h2 {
+    font-family: Sansita;
+    color: #F56B9A;
+}
+
+.EventDetailsPage h3 {
+    font-size: 2rem;
+}
+
+.EventDetailsPage h2 {
+    font-size: 2.5rem;
 }

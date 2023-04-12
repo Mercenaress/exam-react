@@ -1,8 +1,10 @@
 .GreenButton {
     background-color: #37AEAB;
     color: white;
+    font-family: fira sans;
     font-size: 1.5rem;
-    padding: 1rem 2rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
     border: none;
     border-radius: 5px;
 }
