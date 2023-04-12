@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext } from 'react'
 import './App.css'
-import Event from './components/Event'
+import EventsPage from './pages/EventsPage'
 export const EventContext = createContext();
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <EventContext.Provider value={[event, setEvent]}>
-        <Event />
+        <EventsPage />
       </EventContext.Provider>
     </div>
   )

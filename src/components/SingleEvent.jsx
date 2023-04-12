@@ -1,21 +1,28 @@
+import styles from './SingleEvent.module.css'
 function SingleEvent({ event }) {
     return (
-      <div className="event-component">
-        <article className="event-componentcontainer">
-          <section className="event-componentcontainer--date">
-            <p>{event.when.date}</p>
+      <>
+        <article className={styles.eventComponentContainer}>
+          <section className={styles.eventComponentContainerDate}>
+            <p>{event.when.date}</p> 
           </section>
-          <section className="event-componentcontainer--info">
-            <h4>{event.name}</h4>
-            <p>{event.where}</p>
-            <p>{event.when.from}</p>
-            <p>{event.when.to}</p>
+
+          <section>
+            <section className={styles.eventComponentContainerInfo}>
+                <h3>{event.name}</h3>
+                <p>{event.where}</p>
+            </section>
+
+            <section className={styles.eventComponentContainerTimePrice}>
+                <p>{event.when.from} - {event.when.to}</p>
+                <p className={styles.eventComponentPrice}>{event.price} sek</p>
+            </section>
+            <div className={styles.breakLine}></div>
           </section>
-          <section className="event-componentcontainer--price">
-            <p>{event.price}</p>
-          </section>
+          
         </article>
-      </div>
+        
+      </>
     );
   }
   

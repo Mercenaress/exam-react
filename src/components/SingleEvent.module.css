@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+h3, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h3 {
+    font-size: 22px;
+    color: white;
+    text-shadow: 1px 1px #F56B9A;
+}
+
+.eventComponentContainer {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;    
+}
+
+.eventComponentContainerDate {
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+    margin-right: 1.7rem;
+    padding:1.5rem;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.eventComponentContainerDate p {
+    text-align: center;
+}
+
+.eventComponentContainerInfo p {
+    padding: .5rem 0;
+    font-style: italic;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.eventComponentContainerTimePrice {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #D0D0D0;
+}
+
+.eventComponentPrice {
+    margin-left: 5rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: #37AEAB;
+}
+
+.breakLine {
+    margin-top: .5rem;
+    height: 1px;
+    width: 232px;
+    background-color: hsla(0, 0%, 100%, 0.3);
+}
