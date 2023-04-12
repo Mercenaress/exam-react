@@ -11,3 +11,10 @@ body {
     color: #F56B9A;
     text-align: center;
 }
+
+.noResult {
+    margin-top: 2rem;
+    font-size: larger;
+    text-align: center;
+    color: #F56B9A;
+}

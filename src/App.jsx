@@ -1,26 +1,16 @@
-import { useState, useEffect, createContext } from 'react'
-import './App.css'
-import EventsPage from './pages/EventsPage'
-export const EventContext = createContext();
+import { useState, useEffect, createContext } from "react";
+import "./App.css";
+import EventsPage from "./pages/EventsPage";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
-  const API_URL = 'https://majazocom.github.io/Data/events.json'
-  const [event, setEvent] = useState()
-
-  useEffect(() => {
-    fetch(API_URL)
-      .then(response => response.json())
-      .then(data => setEvent(data))
-      .catch(error => console.error(error))
-  }, []);
-
   return (
     <div className="App">
-      <EventContext.Provider value={[event, setEvent]}>
+      <DataProvider>
         <EventsPage />
-      </EventContext.Provider>
+      </DataProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
