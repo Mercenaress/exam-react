@@ -1,12 +1,13 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext } from 'react';
 
 export const DataContext = createContext();
 
-const API_URL = "https://majazocom.github.io/Data/events.json";
+const API_URL = 'https://majazocom.github.io/Data/events.json';
 
 export const DataProvider = ({ children }) => {
-  const [events, setEvents] = useState("");
-  const [searchResult, setSearchResult] = useState("");
+  const [events, setEvents] = useState('');
+  const [searchResult, setSearchResult] = useState('');
+  const [purchasedTickets, setPurchasedTickets] = useState([]);
 
   useEffect(() => {
     fetch(API_URL)
@@ -24,7 +25,14 @@ export const DataProvider = ({ children }) => {
   if (events) {
     return (
       <DataContext.Provider
-        value={{ events, setEvents, searchResult, setSearchResult }}
+        value={{
+          events,
+          setEvents,
+          searchResult,
+          setSearchResult,
+          purchasedTickets,
+          setPurchasedTickets,
+        }}
       >
         {children}
       </DataContext.Provider>

@@ -1,22 +1,20 @@
-
-
-import { useContext } from "react";
-import { DataContext } from "../context/DataContext";
-import SingleEvent from "../components/SingleEvent";
-import SearchEvents from "../components/SearchEvents";
-import styles from "./EventsPage.module.css";
+import { useContext } from 'react';
+import { DataContext } from '../context/DataContext';
+import SingleEvent from '../components/SingleEvent';
+import SearchEvents from '../components/SearchEvents';
+import styles from './EventsPage.module.css';
 
 function EventsPage() {
   const { events, searchResult } = useContext(DataContext);
   return (
-    <>
+    <div className={styles.eventsContainer}>
       <h1 className={styles.header}>Events</h1>
       <SearchEvents />
 
       {searchResult && searchResult.length == 0 ? (
         <p className={styles.noResult}>Inga resultat</p>
       ) : (
-        ""
+        ''
       )}
 
       {searchResult
@@ -26,9 +24,8 @@ function EventsPage() {
         : events.map((ev) => {
             return <SingleEvent key={ev.id} event={ev} />;
           })}
-    </>
+    </div>
   );
 }
 
 export default EventsPage;
-

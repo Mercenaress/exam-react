@@ -1,14 +1,19 @@
-
-
 import Ticket from '../components/Ticket';
 import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './OrderPage.module.css';
 import GreenButton from '../components/GreenButton';
 
 function OrderPage() {
+  const navigate = useNavigate();
   const { cartTickets, cartTotal, submitOrder } = useContext(CartContext);
+
+  const handleOrder = () => {
+    submitOrder();
+    navigate('/confirmationpage');
+  };
 
   return (
     <div className={styles.container}>
@@ -27,7 +32,7 @@ function OrderPage() {
           <p className={styles.orderTotalsText}>Totalt värde på order</p>
           <p className={styles.orderTotal}>{cartTotal} sek</p>
           <GreenButton
-            handleClick={submitOrder}
+            handleClick={handleOrder}
             buttonText="Skicka order"
           />
         </div>
@@ -37,4 +42,3 @@ function OrderPage() {
 }
 
 export default OrderPage;
-

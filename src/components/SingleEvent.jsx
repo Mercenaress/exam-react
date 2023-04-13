@@ -1,16 +1,19 @@
-import styles from "./SingleEvent.module.css";
-import { useNavigate } from 'react-router-dom'
+import styles from './SingleEvent.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function SingleEvent({ event }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/EventDetailsPage', {state: {event}})
-  }
+    navigate('/eventdetailspage', { state: { event } });
+  };
 
   return (
     <>
-      <article onClick={() => handleClick(event)} className={styles.eventComponentContainer}>
+      <article
+        onClick={() => handleClick(event)}
+        className={styles.eventComponentContainer}
+      >
         <section className={styles.eventComponentContainerDate}>
           <p>{event.when.date}</p>
         </section>

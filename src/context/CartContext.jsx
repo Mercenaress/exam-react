@@ -1,59 +1,12 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useContext } from 'react';
+import { DataContext } from './DataContext';
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [purchasedTickets, setPurchasedTickets] = useState([]);
-  const [cartTickets, setCartTickets] = useState([
-    {
-      name: 'Lasse-Stefanz',
-      price: 400,
-      where: 'Avicii arena',
-      when: {
-        date: '21 Mar',
-        from: '20.00',
-        to: '22:00',
-      },
-      quantity: 1,
-      id: 1,
-    },
-    {
-      name: 'Pelle Trubaddur',
-      price: 300,
-      where: 'Avicii arena',
-      when: {
-        date: '29 Mar',
-        from: '20.00',
-        to: '22:00',
-      },
-      quantity: 5,
-      id: 2,
-    },
-    {
-      name: 'Klubb Untz',
-      price: 300,
-      where: 'Avicii arena',
-      when: {
-        date: '29 Mar',
-        from: '20.00',
-        to: '22:00',
-      },
-      quantity: 4,
-      id: 3,
-    },
-    {
-      name: 'Klubb Untz 2',
-      price: 300,
-      where: 'Avicii arena',
-      when: {
-        date: '59 Mar',
-        from: '24.00',
-        to: '02:00',
-      },
-      quantity: 1,
-      id: 4,
-    },
-  ]);
+  const { setPurchasedTickets, purchasedTickets } =
+    useContext(DataContext);
+  const [cartTickets, setCartTickets] = useState([]);
 
   // Lägga till en ny ticket till cart med kontroll om det redan finns en ticket med samma ID.
   const addTicketToCart = (item, quantity) => {
@@ -95,7 +48,7 @@ export const CartProvider = ({ children }) => {
 
   const submitOrder = () => {
     setPurchasedTickets((prevTickets) => {
-      // Letar efter och uppdaterar tickets om det finns sen tidigare
+      // Letar efter och uppdaterar ticket quantity om det finns sen tidigare
       const updatedTickets = cartTickets.map((cartTicket) => {
         const existingTicket = prevTickets.find(
           (prevTicket) => prevTicket.id === cartTicket.id
@@ -110,8 +63,19 @@ export const CartProvider = ({ children }) => {
           return cartTicket;
         }
       });
+
+      const mergedTickets = [
+        ...prevTickets.filter(
+          (prevTicket) =>
+            !updatedTickets.find(
+              (updatedTicket) => updatedTicket.id === prevTicket.id
+            )
+        ),
+        ...updatedTickets,
+      ];
+
       setCartTickets([]);
-      return updatedTickets;
+      return mergedTickets;
     });
   };
 
