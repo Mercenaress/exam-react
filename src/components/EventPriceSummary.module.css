@@ -1,5 +1,5 @@
 .EventPriceSummary {
-    width: 230px;
+    width: 245px;
     height: 120px;
     border: 2px solid #F56B9A;
     border-radius: 4px;
@@ -33,7 +33,12 @@
     justify-content: center;
 }
 
-.EventTicketAmount p {
+.EventTicketAmount input {
     font-size: 1.5rem;
+    background-color: transparent;
+    width: 100px;
+    border: none;
+    text-align: center;
+    color: white;
     margin: 0;
 }

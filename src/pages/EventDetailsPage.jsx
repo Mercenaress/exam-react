@@ -12,7 +12,7 @@ function EventDetailsPage() {
             <p className={styles.TealText} >21 mars kl 19:00-21:00</p>
             <p className={styles.LocationText} >@Kjell Härnqvistsalen</p>
         </section>
-        <EventPriceSummary priceSummary={"1050 sek"} ticketAmount={1} />
+        <EventPriceSummary priceSummary={"1050 sek"} />
         <GreenButton buttonText={"Lägg i varukorgen"} />
         </div>
      );
