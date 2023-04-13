@@ -1,3 +1,4 @@
+
 import React from "react";
 import styles from "../pages/TicketPage.module.css";
 import barcode from '../assets/barcode.svg'
@@ -52,3 +53,4 @@ function TicketPage() {
 }
 
 export default TicketPage;
+
