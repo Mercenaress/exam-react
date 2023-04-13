@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital@1&display=swap');
+
+
+.confirmationPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Sansita', sans-serif;
+    color: #F56B9A;
+    font-size: 40px;
+    text-align: center;
+}
+
+img {
+    width: 60%;
+    margin-top: 3rem;
+}
