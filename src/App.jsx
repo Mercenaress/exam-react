@@ -1,17 +1,17 @@
-import { CartProvider } from './context/CartContext';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import OrderPage from './pages/OrderPage';
+
+import { useState, useEffect, createContext } from "react";
+import "./App.css";
+import EventsPage from "./pages/EventsPage";
+import Confirmation from "./pages/ConfirmationPage";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
   return (
-    <CartProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<OrderPage />} />
-        </Routes>
-      </Router>
-    </CartProvider>
+    <div className="App">
+      <DataProvider>
+        <Confirmation />
+      </DataProvider>
+    </div>
   );
 }
 
