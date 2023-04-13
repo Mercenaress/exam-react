@@ -1,3 +1,4 @@
+
 import EventPriceSummary from "../components/EventPriceSummary";
 import GreenButton from "../components/GreenButton";
 import styles from './EventDetailsPage.module.css'
@@ -19,3 +20,4 @@ function EventDetailsPage() {
 }
 
 export default EventDetailsPage;
+

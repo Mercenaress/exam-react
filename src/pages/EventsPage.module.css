@@ -1,0 +1,20 @@
+body {
+  background-color: #231f42;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital@1&display=swap");
+
+.header {
+  font-family: "Sansita", sans-serif;
+  font-style: italic;
+  font-size: 32px;
+  color: #f56b9a;
+  text-align: center;
+}
+
+.noResult {
+  margin-top: 2rem;
+  font-size: larger;
+  text-align: center;
+  color: #f56b9a;
+}
