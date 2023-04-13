@@ -1,3 +1,4 @@
+
 import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import SingleEvent from "../components/SingleEvent";
@@ -29,3 +30,4 @@ function EventsPage() {
 }
 
 export default EventsPage;
+

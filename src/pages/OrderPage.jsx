@@ -1,3 +1,4 @@
+
 import Ticket from '../components/Ticket';
 import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
@@ -35,3 +36,4 @@ function OrderPage() {
 }
 
 export default OrderPage;
+
