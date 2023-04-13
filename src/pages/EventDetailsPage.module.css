@@ -3,10 +3,10 @@
     height: 100vh;
     background-color: #231F42;
     color: white;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 .EventDetailsPage h3, 
@@ -17,10 +17,32 @@
 
 .EventDetailsPage h3 {
     font-size: 2rem;
+    margin: 2rem;
+}
+
+.HeadText {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
 }
 
 .EventDetailsPage h2 {
     font-size: 2.5rem;
+    margin: 2rem 0 0 0;
+}
+
+.TealText {
+    font-size: 1.2rem;
+    color: #37AEAB;
+    font-weight: 600;
+    margin: 0.5rem;
+}
+
+.LocationText {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 6rem 0;
 }
 
 .EventDetailsPage p {
