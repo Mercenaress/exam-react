@@ -6,11 +6,15 @@ import EventsPage from './pages/EventsPage'
 import EventDetailsPage from './pages/EventDetailsPage'
 import OrderPage from './pages/OrderPage'
 import TicketPage from './pages/TicketPage'
+import { DataProvider } from './context/DataContext'
+import { CartProvider } from './context/CartContext'
+
 
 
 function App() {
   return (
-
+    <DataProvider>
+      <CartProvider>
     <Router>
       <Routes>
         <Route path='/' element={<SplashPage/>} />
@@ -20,6 +24,8 @@ function App() {
         <Route path='/ticketPage' element={<TicketPage/>} />
       </Routes>
     </Router>
+    </CartProvider>
+    </DataProvider>
   )
 
 }

@@ -2,8 +2,13 @@
 import EventPriceSummary from "../components/EventPriceSummary";
 import GreenButton from "../components/GreenButton";
 import styles from './EventDetailsPage.module.css'
+import { useLocation } from "react-router-dom";
 
 function EventDetailsPage() {
+    const location = useLocation()
+    const event = location.state.event;
+
+    console.log(event)
     return ( 
         <div className={styles.EventDetailsPage}>
         <h3>Event</h3>
