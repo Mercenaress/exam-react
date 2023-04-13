@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&family=Sansita+Swashed&display=swap');
-/*general rule */
-*{
-margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,400;1,300&family=Sansita:ital@0;1&display=swap');*{margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
@@ -15,10 +12,9 @@ box-sizing: border-box;
  --grey:rgba(0, 0, 0, 0.06)
  
 }
-@media (max-width: 1400px) {
 body{
 background-color: var(--main-color);
-display: flex;
+display: flex;  
 justify-content: center;
 }
 .container {
@@ -29,18 +25,18 @@ align-items: center;
 flex-direction: column;
 }
 
-h2{
+.heading{
 color:var(--text-color);
-Font-family:Sansita;
+font-family: 'Sansita', sans-serif;
 Font-style: Italic;
-font-Weight:600;
+font-weight: 600;
 font-Size:32px;
 Line-height:37.28px;
 }
 
-p{
+.paragraph{
 color:#fff;
-Font-family: Fira Sans;
+font-family: 'Fira Sans Extra Condensed', sans-serif;
 Font-style: Italic;
 Font-size: 22px;
 Line-height: 26.4px;
@@ -48,4 +44,3 @@ Line-height: 100%;
 
 }
 
-}

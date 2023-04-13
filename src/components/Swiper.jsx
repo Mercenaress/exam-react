@@ -1,5 +1,5 @@
 import React from 'react'
-import _ from '../components/Swiper.css';
+import '../components/Swiper.css';
 
 function Swiper() {
         const [currentPage, setCurrentPage] = React.useState(2);
