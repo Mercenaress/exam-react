@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+.searchEventsContainer {
+    display: flex;
+    justify-content: center;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+.searchInput {
+    all: unset;
+    width: 320px;
+    height: 40px;
+    padding: 0 10px;
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.icon {
+    position: absolute;
+    color: white;
+}

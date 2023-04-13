@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800&display=swap');
+
+.container {
+  background-color: #231f42;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  background-color: #231f42;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  text-align: center;
+  font-family: 'Sansita', sans-serif;
+  font-style: italic;
+  font-size: 32px;
+  color: #f56b9a;
+  padding-top: 25px;
+  margin-bottom: 40px;
+}
+
+.ticketsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.orderTotals {
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  background-color: #231f42;
+  margin-bottom: 30px;
+
+  /* position: fixed;
+  bottom: 5%;
+  left: 0;
+  right: 0; */
+}
+
+.orderTotalsText {
+  font-size: 19px;
+  font-style: italic;
+  filter: opacity(80%);
+  margin-bottom: 15px;
+}
+
+.orderTotal {
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px #f56b9a;
+  margin-bottom: 20px;
+}
+
+.emptyCart {
+  font-family: 'Fira Sans', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+}
