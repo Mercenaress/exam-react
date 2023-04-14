@@ -37,7 +37,7 @@ function Ticket({ ticket }) {
             type="number"
             value={ticket.quantity}
             onChange={(e) =>
-              handleQuantityChange(ticket.id, e.target.value)
+              handleQuantityChange(ticket.id, parseInt(e.target.value))
             }
           />
         </div>
