@@ -9,7 +9,7 @@ function TicketPage() {
 
   if (purchasedTickets.length === 0) {
     return (
-      <div>
+      <div className='no-tickets'>
         <h1>Du har inga biljetter</h1>
       </div>
     );
