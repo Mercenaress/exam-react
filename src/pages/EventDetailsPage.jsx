@@ -1,6 +1,7 @@
 import EventPriceSummary from '../components/EventPriceSummary';
 import styles from './EventDetailsPage.module.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import arrow from '../assets/arrow.svg'
 
 function EventDetailsPage() {
   const location = useLocation();
@@ -9,6 +10,9 @@ function EventDetailsPage() {
   console.log(event);
   return (
     <div className={styles.EventDetailsPage}>
+      <Link to="/eventsPage">
+        <button className={styles.BackButton} ><img src={arrow} alt="" /></button>
+      </Link>
       <h1>Event</h1>
       <p className={styles.HeadText}>
         You are about to score <br /> some tickets to
