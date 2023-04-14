@@ -7,7 +7,7 @@ function ConfirmationPage() {
   const navigation = useNavigate();
 
   const handleClick = () => {
-    navigation('/ticketpage');
+    navigation('/ticketPage');
   };
 
   return (
