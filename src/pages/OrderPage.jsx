@@ -2,6 +2,8 @@ import Ticket from '../components/Ticket';
 import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import arrow from '../assets/arrow.svg';
 
 import styles from './OrderPage.module.css';
 import GreenButton from '../components/GreenButton';
@@ -17,6 +19,11 @@ function OrderPage() {
 
   return (
     <div className={styles.container}>
+      <Link to="/eventsPage">
+        <button className={styles.BackButton}>
+          <img src={arrow} alt="" />
+        </button>
+      </Link>
       <div className={styles.content}>
         <h1>Order</h1>
         <div className={styles.ticketsContainer}>
