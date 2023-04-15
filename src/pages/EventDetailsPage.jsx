@@ -1,6 +1,7 @@
 import EventPriceSummary from '../components/EventPriceSummary';
 import styles from './EventDetailsPage.module.css';
 import { useLocation } from 'react-router-dom';
+import CartIcon from '../components/CartIcon';
 
 function EventDetailsPage() {
   const location = useLocation();
@@ -9,6 +10,7 @@ function EventDetailsPage() {
   console.log(event);
   return (
     <div className={styles.EventDetailsPage}>
+      <CartIcon />
       <h1>Event</h1>
       <p className={styles.HeadText}>
         You are about to score <br /> some tickets to

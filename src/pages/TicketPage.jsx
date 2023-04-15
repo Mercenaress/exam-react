@@ -2,6 +2,8 @@ import React from 'react';
 import { useContext } from 'react';
 import { DataContext } from '../context/DataContext';
 import SingleTicket from '../components/SingleTicket';
+import DotsContainer from '../components/DotsContainer';
+import styles from './TicketPage.module.css';
 
 function TicketPage() {
   const { purchasedTickets } = useContext(DataContext);
@@ -9,9 +11,16 @@ function TicketPage() {
 
   if (purchasedTickets.length === 0) {
     return (
-      <div className='no-tickets'>
-        <h1>Du har inga biljetter</h1>
-      </div>
+      <>
+        <div className={styles.noTickets}>
+          <h1>Du har inga biljetter</h1>
+        </div>
+        <DotsContainer
+          firstDotActive={false}
+          secondDotActive={false}
+          thirdDotActive={true}
+        />
+      </>
     );
   }
 
@@ -26,6 +35,11 @@ function TicketPage() {
         }
         return ticketsToRender;
       })}
+      <DotsContainer
+        firstDotActive={false}
+        secondDotActive={false}
+        thirdDotActive={true}
+      />
     </>
   );
 }

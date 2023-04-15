@@ -1,0 +1,13 @@
+.dot {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.dot.inactive {
+  background-color: rgba(255, 255, 255, 0.3);
+}
