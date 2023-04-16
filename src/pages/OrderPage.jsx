@@ -1,8 +1,8 @@
-import Ticket from '../components/Ticket';
+import TicketCartItem from '../components/TicketCartItem';
 import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocation, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import arrow from '../assets/arrow.svg';
 
 import styles from './OrderPage.module.css';
@@ -29,7 +29,7 @@ function OrderPage() {
         <div className={styles.ticketsContainer}>
           {cartTickets &&
             cartTickets.map((ticket) => (
-              <Ticket key={ticket.name} ticket={ticket} />
+              <TicketCartItem key={ticket.name} ticket={ticket} />
             ))}
           {cartTickets.length === 0 && (
             <p className={styles.emptyCart}>Kundvagnen är tom</p>

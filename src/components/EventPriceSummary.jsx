@@ -6,7 +6,7 @@ import GreenButton from './GreenButton';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
-function EventPriceSummary({ priceSummary, event }) {
+function EventPriceSummary({ event }) {
   const navigate = useNavigate();
   const { addTicketToCart } = useContext(CartContext);
   const [ticketQuantity, setTicketQuantity] = useState(1);
@@ -40,9 +40,12 @@ function EventPriceSummary({ priceSummary, event }) {
     <>
       <section className={styles.EventPriceSummary}>
         <p className={styles.PriceSummaryText}>{totalAmount}</p>
-        <form className={styles.EventTicketAmount}>
+        <form
+          className={styles.EventTicketAmount}
+          onSubmit={(e) => e.preventDefault()}
+        >
           <button type="button" onClick={decrementCounter}>
-            <img src={minus} alt="" />
+            <img src={minus} alt="Decrease quantity" />
           </button>
           <input
             type="number"
@@ -51,7 +54,7 @@ function EventPriceSummary({ priceSummary, event }) {
             value={ticketQuantity}
           />
           <button type="button" onClick={incrementCounter}>
-            <img src={plus} alt="" />
+            <img src={plus} alt="Increase quantity" />
           </button>
         </form>
       </section>

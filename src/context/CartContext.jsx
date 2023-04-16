@@ -8,7 +8,7 @@ export const CartProvider = ({ children }) => {
     useContext(DataContext);
   const [cartTickets, setCartTickets] = useState([]);
 
-  // Lägga till en ny ticket till cart med kontroll om det redan finns en ticket med samma ID.
+  // Add a new ticket to the cart, checking if there's already a ticket with the same ID.
   const addTicketToCart = (item, quantity) => {
     const existingItem = cartTickets.find(
       (cartItem) => cartItem.id === item.id
@@ -30,12 +30,14 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  // Remove a ticket from the cart by ID.
   const removeTicketFromCart = (ticketId) => {
     setCartTickets(
       cartTickets.filter((cartItem) => cartItem.id !== ticketId)
     );
   };
 
+  // Update the quantity of a ticket in the cart by ID.
   const updateTicketQuantity = (itemId, newQuantity) => {
     setCartTickets(
       cartTickets.map((cartItem) =>
@@ -46,9 +48,10 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  // Submit the order, updating purchased tickets.
   const submitOrder = () => {
     setPurchasedTickets((prevTickets) => {
-      // Letar efter och uppdaterar ticket quantity om det finns sen tidigare
+      // Find and update ticket quantity if it already exists.
       const updatedTickets = cartTickets.map((cartTicket) => {
         const existingTicket = prevTickets.find(
           (prevTicket) => prevTicket.id === cartTicket.id
@@ -64,6 +67,7 @@ export const CartProvider = ({ children }) => {
         }
       });
 
+      // Combines the existing purchased tickets (prevTickets) with the updated tickets (updatedTickets)
       const mergedTickets = [
         ...prevTickets.filter(
           (prevTicket) =>

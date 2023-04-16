@@ -1,6 +1,8 @@
 import SwipeableWrapper from './SwipeableWrapper';
 import { useNavigate } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
+
+// pages
 import SplashPage from '../pages/SplashPage';
 import EventsPage from '../pages/EventsPage';
 import EventDetailsPage from '../pages/EventDetailsPage';
@@ -10,7 +12,7 @@ import TicketPage from '../pages/TicketPage';
 
 function SwipeableRoutes() {
   const navigate = useNavigate();
-  const swipeableRoutes = ['/', '/eventsPage', '/ticketPage'];
+  const swipeableRoutes = ['/', '/eventspage', '/ticketpage'];
 
   const onSwipedLeft = () => {
     if (
@@ -51,11 +53,11 @@ function SwipeableRoutes() {
     >
       <Routes>
         <Route path="/" element={<SplashPage />} />
-        <Route path="/eventsPage" element={<EventsPage />} />
+        <Route path="/eventspage" element={<EventsPage />} />
         <Route path="/eventdetailspage" element={<EventDetailsPage />} />
-        <Route path="/orderPage" element={<OrderPage />} />
-        <Route path="/confirmationPage" element={<ConfirmationPage />} />
-        <Route path="/ticketPage" element={<TicketPage />} />
+        <Route path="/orderpage" element={<OrderPage />} />
+        <Route path="/confirmationpage" element={<ConfirmationPage />} />
+        <Route path="/ticketpage" element={<TicketPage />} />
       </Routes>
     </SwipeableWrapper>
   );

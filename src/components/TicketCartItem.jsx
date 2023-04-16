@@ -1,10 +1,10 @@
-import styles from './Ticket.module.css';
+import styles from './TicketCartItem.module.css';
 import addIcon from '../assets/add.svg';
 import subtractIcon from '../assets/subtract.svg';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
-function Ticket({ ticket }) {
+function TicketCartItem({ ticket }) {
   const { updateTicketQuantity, removeTicketFromCart } =
     useContext(CartContext);
 
@@ -53,4 +53,4 @@ function Ticket({ ticket }) {
   );
 }
 
-export default Ticket;
+export default TicketCartItem;

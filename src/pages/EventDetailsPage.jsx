@@ -2,21 +2,20 @@ import EventPriceSummary from '../components/EventPriceSummary';
 import styles from './EventDetailsPage.module.css';
 import { useLocation, Link } from 'react-router-dom';
 import arrow from '../assets/arrow.svg';
-import CartIcon from '../components/CartIcon';
+import CartButton from '../components/CartButton';
 
 function EventDetailsPage() {
   const location = useLocation();
   const event = location.state.event;
 
-  console.log(event);
   return (
     <div className={styles.EventDetailsPage}>
       <Link to="/eventsPage">
         <button className={styles.BackButton}>
-          <img src={arrow} alt="" />
+          <img src={arrow} alt="Go back button" />
         </button>
       </Link>
-      <CartIcon />
+      <CartButton />
       <h1>Event</h1>
       <p className={styles.HeadText}>
         You are about to score <br /> some tickets to

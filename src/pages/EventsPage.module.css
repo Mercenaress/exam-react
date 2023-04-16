@@ -1,9 +1,3 @@
-body {
-  background-color: #231f42;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Sansita:ital@1&display=swap');
-
 .header {
   text-align: center;
   font-family: 'Sansita', sans-serif;
@@ -15,6 +9,7 @@ body {
 }
 
 .noResult {
+  font-family: 'Fira Sans';
   margin-top: 2rem;
   font-size: larger;
   text-align: center;

@@ -1,33 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-
 .searchEventsContainer {
-    display: flex;
-    justify-content: center;
-    font-family: 'Fira Sans', sans-serif;
-
+  display: flex;
+  justify-content: center;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .searchInput {
-    all: unset;
-    width: 320px;
-    height: 40px;
-    padding: 0 10px;
-    color: white;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.10);
-    background-image: url(../assets/search.svg);
-    background-repeat: no-repeat;
-    background-size: 8%;
-    background-position: 2% 50%;
-
+  all: unset;
+  width: 320px;
+  height: 40px;
+  padding: 0 10px;
+  color: white;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: url(../assets/search.svg);
+  background-repeat: no-repeat;
+  background-size: 8%;
+  background-position: 2% 50%;
 }
 
 .searchInput:focus {
-    background-image: none;
+  background-image: none;
 }
 
-
 .icon {
-    position: absolute;
-    color: white;
+  position: absolute;
+  color: white;
 }

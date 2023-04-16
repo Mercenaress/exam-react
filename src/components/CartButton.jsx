@@ -2,9 +2,9 @@ import { CartContext } from '../context/CartContext';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import cartIcon from '../assets/cartIcon.svg';
-import styles from './CartIcon.module.css';
+import styles from './CartButton.module.css';
 
-function CartIcon() {
+function CartButton() {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate('/orderpage');
@@ -22,7 +22,7 @@ function CartIcon() {
   return (
     <div className={styles.cartContainer} onClick={handleClick}>
       <div className={styles.cartIcon}>
-        <img src={cartIcon} alt="" />
+        <img src={cartIcon} alt="Cart icon" />
       </div>
       {cartTickets.length > 0 && (
         <div className={styles.cartQuantity}>{productQuantity}</div>
@@ -31,4 +31,4 @@ function CartIcon() {
   );
 }
 
-export default CartIcon;
+export default CartButton;

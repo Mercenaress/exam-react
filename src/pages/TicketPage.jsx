@@ -7,7 +7,6 @@ import styles from './TicketPage.module.css';
 
 function TicketPage() {
   const { purchasedTickets } = useContext(DataContext);
-  console.log(purchasedTickets);
 
   if (purchasedTickets.length === 0) {
     return (

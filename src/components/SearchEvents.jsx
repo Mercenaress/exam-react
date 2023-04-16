@@ -1,17 +1,16 @@
-import styles from "./SearchEvents.module.css";
-import { useContext } from "react";
-import { DataContext } from "../context/DataContext";
+import styles from './SearchEvents.module.css';
+import { useContext } from 'react';
+import { DataContext } from '../context/DataContext';
 
 const handleSearch = (query, events, setSearchResult) => {
   const result = events.filter((event) =>
-    event.name.toLowerCase().startsWith(query)
+    event.name.toLowerCase().startsWith(query.toLowerCase())
   );
   setSearchResult(result);
 };
 
 function SearchEvents() {
-  const { events, setEvents, setSearchResult, searchResult } =
-    useContext(DataContext);
+  const { events, setSearchResult } = useContext(DataContext);
 
   return (
     <section className={styles.searchEventsContainer}>
@@ -19,7 +18,9 @@ function SearchEvents() {
         className={styles.searchInput}
         type="search"
         name="search-input"
-        onChange={(e) => handleSearch(e.target.value, events, setSearchResult)}
+        onChange={(e) =>
+          handleSearch(e.target.value, events, setSearchResult)
+        }
       />
     </section>
   );
