@@ -11,13 +11,21 @@ function CartIcon() {
   };
 
   const { cartTickets } = useContext(CartContext);
+  let productQuantity = 0;
+
+  if (cartTickets.length > 0) {
+    productQuantity = cartTickets.reduce((total, ticket) => {
+      return total + ticket.quantity;
+    }, 0);
+  }
+
   return (
     <div className={styles.cartContainer} onClick={handleClick}>
       <div className={styles.cartIcon}>
         <img src={cartIcon} alt="" />
       </div>
       {cartTickets.length > 0 && (
-        <div className={styles.cartQuantity}>{cartTickets.length}</div>
+        <div className={styles.cartQuantity}>{productQuantity}</div>
       )}
     </div>
   );
