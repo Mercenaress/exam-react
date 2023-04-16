@@ -19,7 +19,6 @@ function SearchEvents() {
         className={styles.searchInput}
         type="search"
         name="search-input"
-        placeholder="search events"
         onChange={(e) => handleSearch(e.target.value, events, setSearchResult)}
       />
     </section>

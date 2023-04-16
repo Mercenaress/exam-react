@@ -15,7 +15,17 @@
     color: white;
     border-radius: 3px;
     background-color: rgba(255, 255, 255, 0.10);
+    background-image: url(../assets/search.svg);
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 2% 50%;
+
 }
+
+.searchInput:focus {
+    background-image: none;
+}
+
 
 .icon {
     position: absolute;
