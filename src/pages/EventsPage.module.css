@@ -1,0 +1,21 @@
+.header {
+  text-align: center;
+  font-family: 'Sansita', sans-serif;
+  font-style: italic;
+  font-size: 32px;
+  color: #f56b9a;
+  padding-top: 25px;
+  margin-bottom: 40px;
+}
+
+.noResult {
+  font-family: 'Fira Sans';
+  margin-top: 2rem;
+  font-size: larger;
+  text-align: center;
+  color: #f56b9a;
+}
+
+.eventsContainer {
+  margin-bottom: 40px;
+}

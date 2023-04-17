@@ -1,0 +1,63 @@
+.ticketContainer {
+  /* height: 96px; */
+  border: 2px solid #f56b9a;
+  border-radius: 3px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.ticketContainer h2 {
+  font-family: 'Sansita', sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  color: #f56b9a;
+}
+
+.ticketTitle {
+  padding: 6px 12px;
+  border-bottom: 1px solid #f56b9a;
+}
+
+.ticketDate {
+  color: #37aeab;
+  font-family: 'Fira Sans', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ticketQuantityBox {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 28px;
+  color: white;
+}
+
+.ticketQuantityBox > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticketQuantity {
+  border-left: 1px solid #f56b9a;
+  border-right: 1px solid #f56b9a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.ticketQuantity img {
+  pointer-events: none;
+}
+
+.ticketQuantity input {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 60px;
+  text-align: center;
+}

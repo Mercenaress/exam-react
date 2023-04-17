@@ -1,0 +1,27 @@
+.confirmationPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.confirmationPage h1 {
+  font-family: 'Sansita', sans-serif;
+  color: #f56b9a;
+  font-size: 34px;
+  text-align: center;
+}
+
+.confirmationPage img {
+  width: 45%;
+}
+
+.confirmationHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}

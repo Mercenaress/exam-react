@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  color: var(--text-color);
+  font-family: 'Sansita', sans-serif;
+  font-style: Italic;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 37.28px;
+}
+
+.paragraph {
+  color: #fff;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-style: Italic;
+  font-size: 22px;
+  line-height: 26.4px;
+  line-height: 100%;
+}
