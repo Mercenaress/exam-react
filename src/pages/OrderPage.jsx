@@ -35,14 +35,14 @@ function OrderPage() {
             <p className={styles.emptyCart}>Kundvagnen är tom</p>
           )}
         </div>
-        <div className={styles.orderTotals}>
+   { cartTickets.length > 0 &&    <div className={styles.orderTotals}>
           <p className={styles.orderTotalsText}>Totalt värde på order</p>
           <p className={styles.orderTotal}>{cartTotal} sek</p>
           <GreenButton
             handleClick={handleOrder}
             buttonText="Skicka order"
           />
-        </div>
+        </div>}
       </div>
     </div>
   );

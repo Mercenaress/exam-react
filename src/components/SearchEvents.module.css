@@ -18,6 +18,10 @@
   background-position: 2% 50%;
 }
 
+.searchInputActive {
+  background-image: none;
+}
+
 .searchInput:focus {
   background-image: none;
 }

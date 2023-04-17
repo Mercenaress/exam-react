@@ -1,5 +1,5 @@
 import styles from './SearchEvents.module.css';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { DataContext } from '../context/DataContext';
 
 const handleSearch = (query, events, setSearchResult) => {
@@ -10,17 +10,23 @@ const handleSearch = (query, events, setSearchResult) => {
 };
 
 function SearchEvents() {
-  const { events, setSearchResult } = useContext(DataContext);
+  const { events, setSearchResult, query, setQuery } = useContext(DataContext);
+
+
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    setQuery(inputValue);
+    handleSearch(inputValue, events, setSearchResult);
+  };
 
   return (
     <section className={styles.searchEventsContainer}>
       <input
-        className={styles.searchInput}
+        className={query ? `${styles.searchInput} ${styles.searchInputActive}` : `${styles.searchInput}`}
         type="search"
         name="search-input"
-        onChange={(e) =>
-          handleSearch(e.target.value, events, setSearchResult)
-        }
+        onChange={handleInputChange}
+        value={query}
       />
     </section>
   );

@@ -8,6 +8,7 @@ export const DataProvider = ({ children }) => {
   const [events, setEvents] = useState('');
   const [searchResult, setSearchResult] = useState('');
   const [purchasedTickets, setPurchasedTickets] = useState([]);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     fetch(API_URL)
@@ -32,6 +33,8 @@ export const DataProvider = ({ children }) => {
           setSearchResult,
           purchasedTickets,
           setPurchasedTickets,
+          query,
+          setQuery
         }}
       >
         {children}
