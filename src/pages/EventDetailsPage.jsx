@@ -10,7 +10,7 @@ function EventDetailsPage() {
 
   return (
     <div className={styles.EventDetailsPage}>
-      <Link to="/eventsPage">
+      <Link to="/eventspage">
         <button className={styles.BackButton}>
           <img src={arrow} alt="Go back button" />
         </button>
