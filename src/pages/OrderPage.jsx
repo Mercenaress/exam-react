@@ -19,7 +19,7 @@ function OrderPage() {
 
   return (
     <div className={styles.container}>
-      <Link to="/eventsPage">
+      <Link to="/eventspage">
         <button className={styles.BackButton}>
           <img src={arrow} alt="" />
         </button>
